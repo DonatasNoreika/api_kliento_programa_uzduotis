@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if prekiu_sarasas %}
+{% for preke in prekiu_sarasas %}
+<hr>
+<p>{{preke.id}}</p>
+<p>{{preke.pavadinimas}}</p>
+<p>{{preke.kaina}}</p>
+<p>{{preke.kiekis}}</p>
+{% endfor %}
+{% endif %}
+<hr>
+<p><a href="{{ url_for('nauja_preke')}}">Nauja preke</a></p>
+
+{% endblock %}
